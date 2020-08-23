@@ -11,7 +11,7 @@ body, html {
   height: 100vh;
   background-color: #111111;
   z-index: 10;
-  position: absolute;
+  position: fixed;
   text-align: center;
 }
 
@@ -21,6 +21,56 @@ body, html {
   transform: translateX(-50%) translateY(-50%);
   left: 50vw;
   top: 50vh;
+}
+
+#svg_ck-logo {
+  height: 20vh;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50vw;
+  top: 50vh;
+  animation: loading 2s ease-out infinite;
+  transform-origin: bottom;
+}
+
+#svg_ck-logo_2 {
+  height: 20vh;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50vw;
+  top: 50vh;
+  animation: loading-rev 2s ease-out infinite;
+  transform-origin: top;
+}
+
+@keyframes loading-rev{
+  0% {
+    transform: translateX(-100vw) rotateZ(180deg);
+  }
+  50% {
+    transform: translateX(100vw) rotateZ(180deg);
+  }
+  51% {
+    transform: translateX(100vw) translateY(-150%) rotateZ(0deg)
+  }
+  100% {
+    transform: translateX(-100vw) translateY(-150%) rotateZ(0deg);
+  }
+}
+
+@keyframes loading{
+  0% {
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(-100vw);
+  }
+  51% {
+    transform: translateX(-100vw) translateY(-50%) rotateZ(180deg)
+  }
+  100% {
+    transform: translateX(100vw) translateY(-50%) rotateZ(180deg);
+  }
 }
 
 .section {
